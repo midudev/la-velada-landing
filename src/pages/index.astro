@@ -19,6 +19,27 @@
       type="font/woff2"
       crossorigin="anonymous"
     />
+    <link
+      rel="preload"
+      href="/boxers/coscu.webp"
+      as="image"
+      type="image/webp"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      href="/boxers/german.webp"
+      as="image"
+      type="image/webp"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      href="/logo.webp"
+      as="image"
+      type="image/webp"
+      fetchpriority="high"
+    />
   </head>
 
   <body class="relative">
@@ -30,6 +51,8 @@
           class="w-32 lg:w-64 h-auto"
           alt="Logo de la Velada del Año, tercera edición"
           src="/logo.webp"
+          width="385"
+          height="412"
         />
         <h1 class="font-boxing text-5xl text-center text-white font-bold">
           <span
@@ -78,6 +101,7 @@
             class="left-0 h-full z-50"
             src="/boxers/coscu.webp"
             alt="Coscu"
+            fetchpriority="high"
           />
           <img
             class="left-[5%] h-[80%] z-40 animate-fade-right"
@@ -103,6 +127,7 @@
             class="left-[45%] h-[63%] z-0 animate-delay-1000 animate-fade-right"
             src="/boxers/papigavi.webp"
             alt="Papigavi"
+            fetchpriority="low"
           />
         </div>
 
@@ -111,6 +136,7 @@
             class="right-0 h-full z-50"
             src="/boxers/german.webp"
             alt="German"
+            fetchpriority="high"
           />
           <img
             class="right-[5%] h-[80%] z-40 animate-fade-left"
@@ -136,6 +162,7 @@
             class="right-[45%] h-[63%] z-0 animate-fade-left animate-delay-1000"
             src="/boxers/ampeter.webp"
             alt="Ampeter"
+            fetchpriority="low"
           />
         </div>
       </section>
@@ -212,6 +239,16 @@
     src: url("/fonts/boxing-striped.woff2") format("woff2");
     font-weight: bold;
     font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Adjusted Arial Fallback";
+    src: local(Arial);
+    size-adjust: 70%;
+    ascent-override: 130%;
+    descent-override: 0%;
+    line-gap-override: 32%;
+    text-transform: uppercase;
   }
 </style>
 
