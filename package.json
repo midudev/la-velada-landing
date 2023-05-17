@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
+    "optimize:all": "pnpm run optimize:images",
+    "optimize:images": "for file in $(find . -name '*.png'); do cwebp -q 80 $file -o $file.webp; done;",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
