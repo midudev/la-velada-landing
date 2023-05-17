@@ -1,4 +1,4 @@
-# Rediseño de La Velada del Año
+# Rediseño de La Velada del Año
 
 Desarrollo web para fines educativos. Este no es el proyecto oficial.
 
