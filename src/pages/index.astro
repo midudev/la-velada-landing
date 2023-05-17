@@ -1,15 +1,241 @@
----
----
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>La Velada del Año - Un proyecto de Ibai Llanos</title>
+  </head>
+  <body>
+    <header class="relative">
+      <div
+        class="md:absolute md:left-1/2 md:-translate-x-1/2 flex flex-col gap-1 justify-center items-center mt-4 md:mt-0 md:top-8 z-10"
+      >
+        <img
+          class="w-32 lg:w-64 h-auto"
+          alt="Logo de la Velada del Año, tercera edición"
+          src="/logo.png"
+        />
+        <h1 class="font-boxing text-5xl text-center text-white font-bold">
+          <span
+            class="bg-clip-text text-transparent bg-gradient-to-b from-white via-gray-300 to-white inline-block leading-relaxed"
+            >la velada del aÑo</span
+          >
+          <span class="text-yellow-300">III</span>
+        </h1>
+      </div>
+    </header>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+    <main class="relative">
+      <section
+        id="boxers"
+        class={`flex justify-between relative
+				[&>div>img]:absolute [&>div>img]:bottom-0
+				[&>div>img]:w-auto
+			 	[&>div>img]:animate-ease-in-out [&>div>img]:animate-duration-1000
+				h-[40vh] md:h-[65vh] lg:h-screen pt-4 lg:pt-24 border-b border-white/10
+				`}
+      >
+        <div
+          class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#131313] via-zinc-900 to-zinc-950"
+        >
+        </div>
+
+        <div class="relative w-full">
+          <img
+            class="left-0 h-full z-50 animate-fade-right"
+            src="/boxers/coscu.png"
+            alt="Coscu"
+          />
+          <img
+            class="left-[5%] h-[80%] z-40 animate-delay-300 animate-fade-right"
+            src="/boxers/mayichi.png"
+            alt="Mayichi"
+          />
+          <img
+            class="left-[15%] h-[75%] z-30 animate-delay-500 animate-fade-right"
+            src="/boxers/viruzz.png"
+            alt="Viruzz"
+          />
+          <img
+            class="left-[30%] h-[70%] z-20 animate-delay-700 animate-fade-right [clip-path:polygon(64%_27%,_83%_30%,_85%_72%,_100%_100%,_0_100%,_0_0,_75%_0)];"
+            src="/boxers/fernanfloo.png"
+            alt="Fernanfloo"
+          />
+          <img
+            class="left-[42%] h-[68%] z-10 animate-delay-1000 animate-fade-right"
+            src="/boxers/la-rivers.png"
+            alt="La Rivers"
+          />
+          <img
+            class="left-[45%] h-[63%] z-0 animate-delay-[1300ms] animate-fade-right"
+            src="/boxers/papigavi.png"
+            alt="Papigavi"
+          />
+        </div>
+
+        <div class="relative w-full">
+          <img
+            class="right-0 h-full z-50 animate-fade-left"
+            src="/boxers/german.png"
+            alt="German"
+          />
+          <img
+            class="right-[5%] h-[80%] z-40 animate-fade-left animate-delay-300"
+            src="/boxers/amouranth.png"
+            alt="Amouranth"
+          />
+          <img
+            class="right-[15%] h-[75%] z-30 animate-fade-left animate-delay-500"
+            src="/boxers/shelao.png"
+            alt="Shelao"
+          />
+          <img
+            class="right-[30%] h-[70%] z-20 animate-fade-left animate-delay-700"
+            src="/boxers/luzu.png"
+            alt="Luzu"
+          />
+          <img
+            class="right-[42%] h-[66%] z-10 animate-fade-left animate-delay-1000"
+            src="/boxers/rivers.png"
+            alt="Rivers"
+          />
+          <img
+            class="right-[45%] h-[63%] z-0 animate-fade-left animate-delay-[1300ms]"
+            src="/boxers/ampeter.png"
+            alt="Ampeter"
+          />
+        </div>
+      </section>
+
+      <div
+        id="info"
+        class="block lg:absolute lg:bottom-48 z-50 mx-auto lg:left-1/2 lg:-translate-x-1/2"
+      >
+        <div class="flex flex-col">
+          <div class="px-5 pt-4 pb-2 bg-white text-black text-center">
+            <h2 class="font-boxing text-7xl">1 de JULIO</h2>
+          </div>
+          <div class="px-5 pt-2 pb-1 bg-black text-white text-center">
+            <a
+              class="font-boxing text-[46px] hover:contrast-150 hover:scale-105 transition inline-block"
+              href="https://twitch.tv/ibai"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="text-white">twitch.tv/</span><span
+                class="text-yellow-300">ibai</span
+              >
+            </a>
+          </div>
+          <div class="px-5 pt-2 pb-1 bg-sky-600 text-black text-center">
+            <a
+              class="hover:contrast-150 hover:scale-105 transition font-boxing text-4xl inline-block text-white"
+              href="https://twitch.tv/ibai"
+              target="_blank"
+              rel="noopener noreferrer">Comprar Entradas</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="combat"
+        class="absolute bottom-48 z-50 mx-auto left-1/2 -translate-x-1/2 flex flex-col gap-y-24 opacity-0 invisible"
+      >
+        <div class="px-5 pt-4 pb-2 bg-black text-white text-center">
+          <h3 class="font-boxing-striped text-7xl">MAYICHI</h3>
+        </div>
+
+        <span
+          class="left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 font-boxing text-yellow-500 text-8xl block absolute [text-shadow:2px_2px_0px_red,4px_4px_0px_orange,6px_6px_0px_black]"
+        >
+          VS
+        </span>
+
+        <div class="px-5 pt-4 pb-2 bg-white text-black text-center">
+          <h3 class="font-boxing-striped text-7xl">AMOURANTH</h3>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <footer></footer>
 </html>
+
+<style is:global>
+  body {
+    background: #131313;
+  }
+
+  @font-face {
+    font-family: "Boxing";
+    src: url("/fonts/boxing.ttf");
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: "Boxing Striped";
+    src: url("/fonts/boxing-striped.ttf");
+    font-weight: bold;
+  }
+</style>
+
+<script>
+  const $boxers = document.querySelector("#boxers")
+  const $boxersImages = $boxers.querySelectorAll("img")
+
+  const $info = document.querySelector("#info")
+  const $combat = document.querySelector("#combat")
+
+  $boxersImages.forEach(($img) => {
+    $img.addEventListener("mouseleave", () => {
+      $boxersImages.forEach(($img) => {
+        $img.setAttribute("style", "transition: all .3s ease-in-out")
+      })
+
+      $info.setAttribute("style", "opacity: 1; transition: all .3s ease-in-out")
+      $combat.setAttribute(
+        "style",
+        "opacity: 0; transition: all .3s ease-in-out; visibility: hidden"
+      )
+    })
+
+    $img.addEventListener("mouseenter", () => {
+      const sectionImages = $img.parentNode.children
+      const position = Array.from(sectionImages).indexOf($img)
+
+      // get image for the left side and the right side
+      const [leftBoxer, rightBoxer] = [
+        $boxersImages[position], // de la izquierda
+        $boxersImages[position + $boxersImages.length / 2], // de la derecha
+      ]
+
+      // ocultamos la informacion
+      $info.setAttribute("style", "opacity: 0; transition: all .3s ease-in-out")
+      $combat.setAttribute(
+        "style",
+        "opacity: 1; transition: all .3s ease-in-out; visibility: visible"
+      )
+      const [firstBoxerName, secondBoxerName] = $combat.querySelectorAll("h3")
+      firstBoxerName.innerText = leftBoxer.alt
+      secondBoxerName.innerText = rightBoxer.alt
+
+      // ocultar los boxeadores que no interesan
+      $boxersImages.forEach(($img) => {
+        $img.setAttribute(
+          "style",
+          "filter: blur(2px) grayscale(.8); transition: all .3s ease-in-out"
+        )
+      })
+
+      leftBoxer.setAttribute(
+        "style",
+        "scale: 1.05; contrast: 1.1; transition: all .3s ease-in-out"
+      )
+      rightBoxer.setAttribute(
+        "style",
+        "scale: 1.05; contrast: 1.1; transition: all .3s ease-in-out"
+      )
+    })
+  })
+</script>
