@@ -12,11 +12,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^3.1.2",
-    "astro": "^2.4.5",
-    "tailwindcss": "^3.0.24"
+    "@astrojs/tailwind": "3.1.2",
+    "astro": "2.4.5",
+    "tailwindcss": "3.3.2"
   },
   "devDependencies": {
-    "tailwindcss-animated": "^1.0.0"
+    "tailwindcss-animated": "1.0.0"
   }
 }
