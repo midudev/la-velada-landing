@@ -1,0 +1,59 @@
+<div
+  id="notice"
+  class="flex items-center gap-x-6 bg-red-300 px-6 py-2.5 sm:px-3.5 justify-center absolute top-0 w-full z-50 -translate-y-12 transition-transform duration-700"
+>
+  <p class="text-sm leading-6 text-black text-center">
+    <strong class="font-semibold">¡Esta no es la página oficial!</strong>
+    <svg
+      viewBox="0 0 2 2"
+      class="mx-2 inline h-0.5 w-0.5 fill-current"
+      aria-hidden="true"
+    >
+      <circle cx={1} cy={1} r={1}></circle>
+    </svg>
+    Esta página ha sido realizada sólo para fines educativos. La página oficial es:
+    <a
+      class="text-sky-950 font-bold"
+      href="https://la-velada.es/"
+      target="_blank"
+      rel="noopener noreferrer">https://la-velada.es</a
+    >
+  </p>
+
+  <button
+    class="absolute right-4 hover:scale-150 inline-block transition"
+    id="close"
+  >
+    <svg
+      viewBox="0 0 20 20"
+      class="h-5 w-5 text-black fill-current"
+      aria-hidden="true"
+    >
+      <path
+        d="M10.707 10l4.147-4.146a.5.5 0 10-.708-.708L10 9.293 5.854 5.146a.5.5 0 10-.708.708L9.293 10l-4.147 4.146a.5.5 0 10.708.708L10 10.707l4.146 4.147a.5.5 0 00.708-.708L10.707 10z"
+      ></path>
+    </svg>
+  </button>
+</div>
+
+<script>
+  const button = document.querySelector("#close")
+  const banner = document.querySelector("#notice")
+
+  // read localStorage
+  const notice = localStorage.getItem("notice")
+
+  // if notice is true, remove banner
+  if (notice) {
+    banner.remove()
+  } else {
+    banner.classList.remove("-translate-y-12")
+    button.addEventListener("click", () => {
+      const banner = document.querySelector("#notice")
+      // remove banner
+      banner.remove()
+      // set localStorage
+      localStorage.setItem("notice", "true")
+    })
+  }
+</script>
