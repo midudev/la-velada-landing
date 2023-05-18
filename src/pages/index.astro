@@ -247,7 +247,7 @@ import boxers from "../boxers.json"
       </a>
     </section>
 
-    <section class="max-w-6xl gap-4 m-auto px-6 py-10 w-full">
+    <section class="max-w-6xl gap-4 m-auto px-6 pt-10 pb-20 w-full">
       <h2
         class="font-boxing text-white pb-4 uppercase text-center text-4xl font-extralight"
       >
@@ -260,14 +260,18 @@ import boxers from "../boxers.json"
       >
         <img
           alt="Mapa de la localización de la velada del año"
-          class="rounded shadow-lg w-full h-auto border border-white/10"
+          class="rounded shadow-lg shadow-gray-100 w-full h-auto border border-black/10 invert"
           src="/map.png"
           loading="lazy"
         />
       </a>
     </section>
 
-    <footer class="w-full m-auto">
+    <footer class="w-full m-auto relative">
+      <div
+        class="footer__bg absolute inset-0 bg-[url('/footer_fondo_velada.webp')] bg-no-repeat bg-bottom bg-scroll bg-cover -z-10"
+      >
+      </div>
       <div
         class="mx-auto max-w-6xl w-full overflow-hidden px-6 pt-10 pb-10 sm:py-24 lg:px-8"
       >
@@ -339,6 +343,13 @@ import boxers from "../boxers.json"
       background: #131313;
     }
 
+    .footer__bg {
+      -webkit-mask-image: linear-gradient(to top, #131313 60%, transparent 98%);
+      -webkit-mask-repeat: no-repeat;
+      mask-image: linear-gradient(to top, #131313 60%, transparent 98%);
+      mask-repeat: no-repeat;
+    }
+
     @font-face {
       font-family: "Boxing";
       font-weight: bold;
@@ -347,63 +358,64 @@ import boxers from "../boxers.json"
   </style>
 
   <script>
-    const $boxers = document.querySelector("#boxers")
-    const $boxersImages = $boxers.querySelectorAll("img")
+    const $boxers = document.querySelector("#boxers");
+    const $boxersImages = $boxers.querySelectorAll("img");
 
-    const $info = document.querySelector("#info") as HTMLElement
-    const $combat = document.querySelector("#combat") as HTMLElement
+    const $info = document.querySelector("#info") as HTMLElement;
+    const $combat = document.querySelector("#combat") as HTMLElement;
 
     $boxersImages.forEach(($img) => {
       $img.addEventListener("mouseleave", () => {
         $boxersImages.forEach(($img) => {
-          $img.style.filter = "none"
-          $img.style.transition = "all .3s ease-in-out"
-          $img.style.scale = "1"
-        })
+          $img.style.filter = "none";
+          $img.style.transition = "all .3s ease-in-out";
+          $img.style.scale = "1";
+        });
 
-        $info.style.opacity = "1"
-        $info.style.transition = "all .3s ease-in-out"
+        $info.style.opacity = "1";
+        $info.style.transition = "all .3s ease-in-out";
 
-        $combat.style.opacity = "0"
-        $combat.style.transition = "all .3s ease-in-out"
-      })
+        $combat.style.opacity = "0";
+        $combat.style.transition = "all .3s ease-in-out";
+      });
 
       $img.addEventListener("mouseenter", () => {
-        const sectionImages = $img.parentNode.children
-        const position = Array.from(sectionImages).indexOf($img)
+        const sectionImages = $img.parentNode.children;
+        const position = Array.from(sectionImages).indexOf($img);
 
         // get image for the left side and the right side
         const [leftBoxer, rightBoxer] = [
           $boxersImages[position], // de la izquierda
           $boxersImages[position + $boxersImages.length / 2], // de la derecha
-        ]
+        ];
 
         // ocultamos la informacion
-        $info.style.opacity = "0"
-        $info.style.transition = "all .3s ease-in-out"
+        $info.style.opacity = "0";
+        $info.style.transition = "all .3s ease-in-out";
 
-        $combat.style.opacity = "1"
-        $combat.style.visibility = "visible"
-        $combat.style.transition = "all .3s ease-in-out"
+        $combat.style.opacity = "1";
+        $combat.style.visibility = "visible";
+        $combat.style.transition = "all .3s ease-in-out";
 
-        const [firstBoxerName, secondBoxerName] = $combat.querySelectorAll("h3")
-        firstBoxerName.innerText = leftBoxer.alt
-        secondBoxerName.innerText = rightBoxer.alt
+        const [firstBoxerName, secondBoxerName] =
+          $combat.querySelectorAll("h3");
+        firstBoxerName.innerText = leftBoxer.alt;
+        secondBoxerName.innerText = rightBoxer.alt;
 
         // ocultar los boxeadores que no interesan
         $boxersImages.forEach(($img) => {
-          $img.style.filter = "blur(2px) grayscale(.8)"
-          $img.style.transition = "all .3s ease-in-out"
-        })
+          $img.style.filter = "blur(2px) grayscale(.8)";
+          $img.style.transition = "all .3s ease-in-out";
+        });
 
-        leftBoxer.style.scale = "1.2"
-        leftBoxer.style.filter = "contrast(1.1)"
-        leftBoxer.style.transition = "all .3s ease-in-out"
+        leftBoxer.style.scale = "1.2";
+        leftBoxer.style.filter = "contrast(1.1)";
+        leftBoxer.style.transition = "all .3s ease-in-out";
 
-        rightBoxer.style.scale = "1.2"
-        rightBoxer.style.filter = "contrast(1.1)"
-        rightBoxer.style.transition = "all .3s ease-in-out"
-      })
-    })
+        rightBoxer.style.scale = "1.2";
+        rightBoxer.style.filter = "contrast(1.1)";
+        rightBoxer.style.transition = "all .3s ease-in-out";
+      });
+    });
   </script>
 </html>
